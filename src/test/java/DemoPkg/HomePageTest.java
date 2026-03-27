@@ -22,13 +22,20 @@ public class HomePageTest {
     }
 
     @Test
-    public void ElementsModules(){
+    public void elementsModule(){
         driver.findElement(homePageTest.getElementsModules()).click();
         driver.findElement(elementsPage.getTextBoxField()).click();
         driver.findElement(elementsPage.getFullNameField()).sendKeys(configReader.ConfigReader("fullName"));
         driver.findElement(elementsPage.getEmailField()).sendKeys(configReader.ConfigReader("email"));
         driver.findElement(elementsPage.getCurrentAddressField()).sendKeys(configReader.ConfigReader("currentAddress"));
         driver.findElement(elementsPage.getSubmitButton()).click();
+    }
+
+    @Test
+    public void textBoxModule(){
+        driver.findElement(homePageTest.getElementsModules()).click();
+        driver.findElement(elementsPage.getCheckBox()).click();
+        driver.findElement(elementsPage.getSelectCheckBox()).click();
     }
 
 
